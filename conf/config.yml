@@ -7,7 +7,7 @@ logLevel: INFO # Log messages with this level and above. Valid levels are DEBUG,
 # Connectivity
 webServerEnabled: true # accept incoming HTTP long-polling and websocket connections
 tcpServerEnabled: true # accept incoming TCP connections
-port: 6020 # port for the HTTP/websocket server
+port: ${PORT} # port for the HTTP/websocket server
 host: 0.0.0.0 # host for the HTTP/websocket server
 tcpPort: 6021 # port for the TCP server
 tcpHost: 0.0.0.0 # host for the TCP server
@@ -56,11 +56,13 @@ plugins:
   #   options:
   #     serverLocation: 'localhost:11211'
   #
-  # storage:
-  #   name: rethinkdb
-  #   options:
-  #     host: localhost
-  #     port: 28015
+  storage:
+    name: mongodb
+    options:
+      connectionString: ${MONGODB_URI}
+      database: 'someDb'
+      defaultTable: 'someTable'
+      splitChar: '/'
 
 # Storage options
 storageExclusion: null # a RegExp that matches recordNames. If it matches, the record's data won't be stored in the db
