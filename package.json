@@ -4,7 +4,7 @@
   "description": "Deploy a deepstream.io server on heroku",
   "main": "index.js",
   "scripts": {
-    "start": "deepstream start"
+    "start": "PORT=${PORT:-6020} deepstream start"
   },
   "engines": {
     "node": "4.4.7"
