@@ -90,13 +90,6 @@ auth:
 #     permittedStatusCodes: [ 200 ] # any of these will be treated as access granted
 #     requestTimeout: 2000 # if the webhook didn't respond after this amount of milliseconds, the connection will be rejected
 
-# Permissioning
-permission:
-  type: config # Only config or custom permissionHandler at the moment
-  options:
-    path: ./permissions.yml # Path to the permissionFile. Can be json, js or yml
-    maxRuleIterations: 3 # Amount of times nested cross-references will be loaded. Avoids endless loops
-    cacheEvacuationInterval: 60000 # PermissionResults are cached to increase performance. Lower number means more loading
 
 # Timeouts (in milliseconds)
 rpcProviderQueryTimeout: 1000
