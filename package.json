@@ -12,8 +12,8 @@
   "author": "Anton Wilhelm",
   "license": "ISC",
   "dependencies": {
-    "deepstream.io": "2.1.1",
-    "deepstream.io-cache-redis": "^1.0.0",
+    "deepstream.io": "github:deepstreamio/deepstream.io",
+    "deepstream.io-cache-redis": "github:nolram88/deepstream.io-cache-redis",
     "deepstream.io-storage-mongodb": "^1.0.1"
   }
 }
